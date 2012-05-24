@@ -1,0 +1,16 @@
+# Debian Packages
+# update
+install sudo
+install zsh
+install tmux
+install rsync
+install ruby-full
+install rubygems
+install libxml2-utils
+install libxml2-dev
+install xsltproc
+install libxslt1-dev
+install git
+install ntp # openntpd
+install curl
+install libcurl4-openssl-dev
