@@ -1,16 +1,24 @@
 # Debian Packages
-# update
+update
 install sudo
 install zsh
 install tmux
 install rsync
-install ruby-full
-install rubygems
 install libxml2-utils
 install libxml2-dev
 install xsltproc
 install libxslt1-dev
 install git
-install ntp # openntpd
+install ntp
 install curl
 install libcurl4-openssl-dev
+install rxvt-unicode
+install aspell-en
+install gnupg2
+install pwgen
+install wget
+install zip
+install unzip
+install xsel
+install libreoffice
+install xpdf
