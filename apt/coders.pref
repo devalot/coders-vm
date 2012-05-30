@@ -1,0 +1,4 @@
+# Testing is almost never an install option
+Package: *
+Pin: release a=testing
+Pin-Priority: 100

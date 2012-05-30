@@ -22,3 +22,12 @@ install unzip
 install xsel
 install libreoffice
 install xpdf
+
+# Special packages for DaVinci Coders
+install emacs-snapshot-lucid
+install emacs-snapshot-gtk
+install emacs-snapshot-el
+
+# Packages to install by hand:
+#
+# - iceweasel
