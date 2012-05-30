@@ -22,12 +22,16 @@ install unzip
 install xsel
 install libreoffice
 install xpdf
+install build-essential
 
 # Special packages for DaVinci Coders
-install emacs-snapshot-lucid
-install emacs-snapshot-gtk
+install emacs-snapshot
 install emacs-snapshot-el
+install postgresql-9.1
+install sqlite3
+install libsqlite3-dev
 
 # Packages to install by hand:
 #
 # - iceweasel
+# - flashplugin-nonfree (then update-flashplugin-nonfree --install)
