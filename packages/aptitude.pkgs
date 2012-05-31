@@ -28,9 +28,11 @@ install build-essential
 install emacs-snapshot
 install emacs-snapshot-el
 install postgresql-9.1
+install libpq-dev
 install sqlite3
 install libsqlite3-dev
 install vlc
+install x11vnc
 
 # Packages to install by hand:
 #
