@@ -34,6 +34,10 @@ install libsqlite3-dev
 install vlc
 install x11vnc
 
+# Packages for Ruby
+install libyaml-dev
+install libreadline-dev
+
 # Packages to install by hand:
 #
 # - iceweasel

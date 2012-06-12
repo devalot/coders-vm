@@ -1,0 +1,11 @@
+install bundler
+install highline
+install httparty
+install jquery-rails
+install json
+install money
+install pg
+install rails
+install sqlite3
+install therubyracer
+install uglifier
