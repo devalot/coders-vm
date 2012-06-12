@@ -111,7 +111,7 @@ update_student_configs () {
     if [ -d /home/$user ]; then
       name=`getent passwd $user|awk -F: '{print $5}'|awk -F, '{print $1}'`
       message "Updating configuration for $name"
-      su $user -c "(cd $coders_vm && sh $script)" > /dev/null
+      su - $user -c "(cd $coders_vm && sh $script)" > /dev/null
     fi
   done
 }
