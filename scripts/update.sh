@@ -72,7 +72,7 @@ install_ruby () {
   fi
 
   message "Updating Gems"
-  (cd packages && make /etc/gem.pkgs-installed) > /dev/null \
+  (cd packages && make /etc/gem.pkgs-installed) > /dev/null 2>&1 \
     || die "failed to install all Ruby gems"
 }
 
