@@ -60,8 +60,9 @@ update_packages () {
   (cd packages && make /etc/aptitude.pkgs-installed) > /dev/null \
     || die "updating packages failed"
 
-  apt-get -qy dist-upgrade > /dev/null \
-    || die "dist-upgrade failed"
+  # This breaks the VM right now :(
+  # apt-get -qy dist-upgrade > /dev/null \
+  #   || die "dist-upgrade failed"
 }
 
 ################################################################################
