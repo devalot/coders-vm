@@ -77,7 +77,7 @@ update_packages () {
 
 ################################################################################
 is_ruby_readline_installed () {
-  if [ `find /usr/lib/ruby/site_ruby/1.9.1 -name readline.so|wc -l` -gt 0 ]; then
+  if [ `find /usr/lib/ruby -name readline.so|wc -l` -gt 0 ]; then
     return 0
   else
     return 1
