@@ -35,6 +35,10 @@ install vlc
 install x11vnc
 install xchat-gnome
 
+# Packages for Ruby
+install libyaml-dev
+install libreadline-dev
+
 # Packages to install by hand:
 #
 # - iceweasel
