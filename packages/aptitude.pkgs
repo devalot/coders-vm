@@ -33,6 +33,7 @@ install sqlite3
 install libsqlite3-dev
 install vlc
 install x11vnc
+install xchat-gnome
 
 # Packages to install by hand:
 #
