@@ -67,7 +67,7 @@ update_packages () {
   (cd apt && make) \
     || die "updating apt files failed"
 
-  (cd packages && make /etc/aptitude.pkgs-installed) > \
+  (cd packages && make /etc/aptitude.pkgs-installed) \
     || die "updating packages failed"
 
   # This breaks the VM right now :(
