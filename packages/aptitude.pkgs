@@ -34,6 +34,7 @@ install libsqlite3-dev
 install vlc
 install x11vnc
 install xchat-gnome
+install git-gui
 
 # Packages for Ruby
 install libyaml-dev
