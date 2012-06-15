@@ -76,8 +76,17 @@ update_packages () {
 }
 
 ################################################################################
+is_ruby_readline_installed () {
+  if [ `find /usr/lib/ruby/site_ruby/1.9.1 -name readline.so|wc -l` -gt 0 ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+################################################################################
 install_ruby () {
-  if ! which ruby; then
+  if ! which ruby || ! is_ruby_readline_installed; then
     message "Installing Ruby"
     grunt/generic/bin/build-ruby.sh || die "failed to install ruby"
   fi
