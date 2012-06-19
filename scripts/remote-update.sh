@@ -29,12 +29,15 @@ echo "==> Preparing for virtual machine update..." 1>&4
 
 ################################################################################
 if [ ! -d $coders_vm_dir ]; then
-  (cd /tmp && git clone $coders_vm_url)                  || die "clone failed"
-  (cd $coders_vm_dir && git submodule update --init)     || die "sb init failed"
+  (cd /tmp && git clone $coders_vm_url) \
+    || die "clone failed"
 else
-  (cd $coders_vm_dir && git checkout master && git pull) || die "pull failed"
-  (cd $coders_vm_dir && git submodule update --init)     || die "sb update failed"
+  (cd $coders_vm_dir && git checkout master && git pull) \
+    || die "pull failed"
 fi
+
+(cd $coders_vm_dir && git submodule update --init) \
+  || die "sb init failed"
 
 ################################################################################
 exec 1>&4
