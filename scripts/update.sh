@@ -85,15 +85,32 @@ is_ruby_readline_installed () {
 }
 
 ################################################################################
+install_gems () {
+  message "Updating Gems"
+  export FORCE_PKG_INSTALL=NO
+
+  # An older version of Ruby left a bunch of files in /usr/local/bin
+  if [ -d /usr/local/bin ]; then
+    for file in /usr/local/bin/*; do
+      if file $file 2>&1 | grep -q ruby1.9.1; then
+        FORCE_PKG_INSTALL=YES
+        rm -f $file
+      fi
+    done
+  fi
+
+  (cd packages && make /etc/gem.pkgs-installed) \
+    || die "failed to install all Ruby gems"
+}
+
+################################################################################
 install_ruby () {
   if ! which ruby || ! is_ruby_readline_installed; then
     message "Installing Ruby"
     grunt/generic/bin/build-ruby.sh || die "failed to install ruby"
   fi
 
-  message "Updating Gems"
-  (cd packages && make /etc/gem.pkgs-installed) \
-    || die "failed to install all Ruby gems"
+  install_gems
 }
 
 ################################################################################
