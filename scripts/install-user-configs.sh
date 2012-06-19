@@ -15,5 +15,13 @@ if [ ! -d $students_config ]; then
 fi
 
 ################################################################################
+# Fix a few broken things with Emacs.
+if [ -d ~/.emacs.d/rhtml/rhtml ]; then
+  # An older version of update.sh didn't update the Unix starter kit
+  # submodules and we ended up creating empty directories.
+  rm -rf ~/.emacs.d/rhtml
+fi
+
+################################################################################
 (cd $unix_starter_kit && make)
 (cd $students_config  && make)

@@ -143,6 +143,9 @@ update_student_configs () {
       || die "failed to update the Unix starter kit"
   fi
 
+  (cd $unix_starter_kit && git submodule update --init) \
+    || die "failed to git sb update the Unix starter kit"
+
   for user in `ls /home`; do
     if [ -d /home/$user ]; then
       name=`getent passwd $user|awk -F: '{print $5}'|awk -F, '{print $1}'`
